@@ -50,3 +50,28 @@ create prettierignore
      /node_modules
      ./dist
 
+install mongoose express and dotenv
+
+    npm i mongoose express dotenv
+
+create a file index.js inside the db folder
+
+        import mongoose from "mongoose";
+        import {DB_NAME } from "../contants";
+
+
+     const connectDB = async()=>{
+    try{
+     const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`)
+        console.log(`\n MongoDB connected !! DB HOST :${connectionInstance.connection.host}`);
+    }catch(error){
+        console.log("MongoDB Connection Error ",error);
+        process.exit(1)
+            }
+        }
+
+
+        export default connectDB
+
+
+
