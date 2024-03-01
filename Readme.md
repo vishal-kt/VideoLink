@@ -73,5 +73,31 @@ create a file index.js inside the db folder
 
         export default connectDB
 
+bring all your code in index.js
+    
+    import dotenv from 'dotenv'
+    import connectDB from './db/index.js';
 
 
+     connectDB()
+        .then(()=>{
+            app.listen(process.env.PORT||8000,()=>{
+                console.log(` 😁 server is running at PORT ${process.env.PORT}`);
+            })
+
+            app.on('error 😣' ,(error)=>{console.error("server failed to start",error);
+            });
+            
+        })
+        .catch((error)=>{
+            console.log("Mongo DB Connection Failed !!!!",error);    
+        })  
+
+
+
+install cookie-parser cors
+
+import them in apps 
+
+
+## CORS, or Cross-Origin Resource Sharing, is a security feature in web browsers. It controls which websites can access data from other websites. It's used to protect users' data and resources by preventing unauthorized access from malicious websites. CORS allows servers to specify which origins are allowed to access their resources, enabling controlled sharing of data between different domains while maintaining security. In simpler terms, CORS helps keep your data safe on the internet by controlling who can access it from other websites.
