@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import signupRoute from "./routes/user.routes.js"
+import loginRoute from "./routes/login.routes.js"
 
 
 const app = express()
@@ -20,6 +21,6 @@ const app = express()
     app.use(cookieParser())
 
    app.use("/api/v1/users",signupRoute);
-
+   app.use("/api/v1/auth", loginRoute); 
 
 export{app}
