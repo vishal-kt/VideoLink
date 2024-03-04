@@ -28,10 +28,12 @@ const loginUser = asyncHandler(async (req, res) => {
     }
 
     // Generate JWT token
-    const token = user.generateToken();
+    const token = user.generateRefreshToken();
 
     // Return success response with token
-    res.status(200).json(new ApiResponse(200, { token }, "Login successful"));
+    const welcomeMessage = `Welcome aap ka swagat h 👐 , ${user.username}`;
+    const responseData = {token , username:user.name,welcomeMessage}
+    res.status(200).json(new ApiResponse(200, responseData , "Login successful"));
 });
 
 export default loginUser;
