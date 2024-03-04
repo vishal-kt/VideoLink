@@ -104,7 +104,7 @@ import them in apps
 
 
 
-# inside post do this 
+# inside postman  do this to create a user
 
 Open Postman. <br>
 Select the HTTP method as POST. <br>
@@ -117,4 +117,12 @@ Enter your JSON data in the text area. For example:<br>
     "username": "example_user",
     "email": "example@example.com",
     "password": "example_password"
+    }
+
+
+# to login do this 
+dnt forget this http://localhost:8000/api/v1/auth/login
+    {
+        "email":"example@mail.com",
+        "password":"your_password"
     }
