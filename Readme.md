@@ -101,3 +101,20 @@ import them in apps
 
 
 ## CORS, or Cross-Origin Resource Sharing, is a security feature in web browsers. It controls which websites can access data from other websites. It's used to protect users' data and resources by preventing unauthorized access from malicious websites. CORS allows servers to specify which origins are allowed to access their resources, enabling controlled sharing of data between different domains while maintaining security. In simpler terms, CORS helps keep your data safe on the internet by controlling who can access it from other websites.
+
+
+
+# inside post do this 
+
+Open Postman. <br>
+Select the HTTP method as POST. <br>
+Enter the URL for your endpoint: http://localhost:your_port/api/v1/users/signup (replace your_port with the port number your server is running on).<br>
+Go to the "Body" tab.<br>
+Select "raw" and choose "JSON" from the dropdown menu.<br>
+Enter your JSON data in the text area. For example:<br>
+
+     {
+    "username": "example_user",
+    "email": "example@example.com",
+    "password": "example_password"
+    }
